@@ -1,0 +1,57 @@
+body {
+  background-color: #121212;
+  color: #00ffcc;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff00ff;
+}
+
+.api-input {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 50%;
+  border: 2px solid #00ffcc;
+  border-radius: 5px;
+  background: #1e1e1e;
+  color: white;
+}
+
+button {
+  background: #ff00ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #00ffcc;
+}
+
+.result {
+  background: rgba(0, 255, 204, 0.1);
+  padding: 10px;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
