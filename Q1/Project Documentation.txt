@@ -1,0 +1,71 @@
+Project Documentation:
+
+Overview
+This project is a dashboard application built using React.js for the frontend and FastAPI for the backend. It allows users to fetch and display data dynamically from various API endpoints.
+
+Technologies Used
+Frontend: React.js
+Backend: FastAPI
+Styling: CSS
+Middleware: CORS for API communication
+
+Functionalities & Description
+1. main.py (Backend - FastAPI)
+Location: backend/main.py
+Purpose: Handles API requests & serves user data.
+Key Functionalities:
+	Provides API routes for fetching users, top users, and posts.
+	Implements CORS Middleware to allow React to fetch data.
+	Uses FastAPI framework for quick and efficient API handling.
+
+API Endpoints:
+
+Endpoint	Method	Description
+/	GET	Returns a success message if the backend is running
+/users	GET	Fetches all users
+/top_users	GET	Fetches the top 10 users
+/posts?type=popular	GET	Fetches the most popular posts
+/posts?type=latest	GET	Fetches the latest posts
+
+2. Dashboard.js (Frontend - React Component)
+ Location: frontend/src/components/Dashboard.js
+ Purpose: Provides the dashboard interface & handles API calls.
+ Key Functionalities:
+ Allows users to enter API endpoints dynamically.
+ Fetches data from the backend and displays results in real time.
+ Handles errors gracefully if an API request fails.
+
+ How It Works:
+
+User enters an API endpoint (e.g., /users, /top_users, /posts?type=popular).
+Clicks the "Fetch Data" button to retrieve data.
+Data is displayed dynamically in the dashboard.
+If an error occurs, an error message is shown instead of crashing the UI.
+ App.js (Frontend - React Entry Point)
+ Location: frontend/src/App.js
+ Purpose: Acts as the main entry file for React.
+ Key Functionalities:
+ Renders the Dashboard component inside the app.
+ Provides a base structure for additional components if needed.
+
+🔹 How It Works:
+
+Imports Dashboard.js and displays it inside the main layout.
+ index.js (Frontend - React DOM Renderer)
+ Location: frontend/src/index.js
+ Purpose: Renders the React application inside the browser.
+ Key Functionalities:
+ Mounts the <App /> component into the root HTML file (public/index.html).
+ Ensures React is initialized correctly.
+
+ How It Works:
+
+Uses ReactDOM.createRoot() to render <App /> inside the <div id="root"> in index.html.
+ App.css (Frontend - Styling)
+ Location: frontend/src/App.css
+ Purpose: Styles the dashboard and input components.
+ Key Functionalities:
+ Provides basic UI styling for the input box, buttons, and results.
+ Uses responsive CSS to adapt to different screen sizes.
+ Allows easy customization by modifying CSS classes.
+
